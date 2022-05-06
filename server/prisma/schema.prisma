@@ -6,14 +6,14 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 //Criar table
 model Feedback {
   //Passando os campos da tabela
-  id String @id @default(uuid()) //Primary Key 
+  id String @id @default(uuid()) //Primary Key
 
   type       String
   comment    String
